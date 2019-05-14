@@ -8,6 +8,8 @@ let todolist = [];
 
 /* The to do list and the form are displayed */
 app.get('/todo', function(req, res) {
+    console.log("TODO view")
+    //console.log(req)
     res.render('todo.ejs', { todolist, clickHandler:"func1();" });
 })
 
@@ -26,6 +28,14 @@ app.get('/todo', function(req, res) {
     }
     res.redirect('/todo');
 })
+
+/* Edit an item on the the to do list */
+.post('/todo/edit/', urlencodedParser, function(req, res) {
+    console.log(req.body.item)
+    todolist = req.body.item
+    res.render('edit.ejs', { todolist, clickHandler:"func1();" });
+})
+
 
 /* Redirects to the to do list if the page requested is not found */
 .use(function(req, res, next){

@@ -12,7 +12,8 @@
         <h1>My todolist</h1>
         <ul>
         <% todolist.forEach(function(todo, index) { %>
-            <li><a href="/todo/delete/<%= index %>">✘</a> <%- todo %></li>
+            <li><a href="/todo/delete/<%= index %>">✘</a> <%- todo %>
+            </a>
         <% }); %>
         </ul>
 
@@ -21,6 +22,15 @@
                 <label for="newtodo">What shoud I do?</label>
                 <input type="text" name="newtodo" id="newtodo" autofocus />
                 <input type="submit" />
+            </p>
+        </form>
+
+        <form action="/todo/edit/" method="post">
+            <p>
+                <% todolist.forEach(function(todo, index) { %>
+                <input type="hidden" name="item" value=<%= todo %> autofocus />
+                <% }); %>
+                <input type="submit" value="edit"/>
             </p>
         </form>
     </body>

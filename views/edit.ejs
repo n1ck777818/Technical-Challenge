@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Edit Entry</title>
+        <style>
+            a {text-decoration: none; color: black;}
+        </style>
+    </head>
+
+    <body>
+      <% todolist.forEach(function(todo, index) { %>
+      <form action="/todo/edit/" method="post">
+        <input type="text" name="item" value=<%= todo %> ><br>
+      <% }); %>
+      <input type="submit" value="Save">
+      </form>
+      <form action="/todo">
+         <button type="submit">Back</button>
+      </form>
+    </body>
+</html>
