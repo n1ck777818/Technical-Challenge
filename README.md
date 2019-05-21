@@ -32,6 +32,7 @@ Visit http://localhost:8080 in your browser
 
 Task 1 - Added a edit function in the todo list in order to edit tasks in the todo list.
 
+Task 2 - Added tests in ./test/test.js for viewing, editing and deleting items.
 
 > - Will be nice if you can git tag the tasks by number
 
@@ -47,4 +48,23 @@ Task 1 - I created an edit button on the web app which allows you to edit all of
 
 I then added the /todo/edit function in edit.ejs with the text type and the item property so that the user could edit the todo list item that they required and added the back and save button to save the edited item and return back to the homepage /todo.
 
-Task 2 - 
+Task 2 - Used chai and mocha for unit testing of our existing application.
+
+Here is the test coverage below (As you can see, you can run "mocha" in the base of the project in order to preform the tests:
+
+SA-MAC-02:Technical-Challenge_entersekt nicholas.green$ mocha
+
+  List /todo items
+    ✓ List items /todo
+
+  Add item /todo/add
+TODO view
+    ✓ Add test item /todo/add
+
+  Delete item /todo
+    ✓ Delete test item
+(node:45684) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+
+
+  3 passing (36ms)
+
