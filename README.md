@@ -34,6 +34,23 @@ Task 1 - Added a edit function in the todo list in order to edit tasks in the to
 
 Task 2 - Added tests in ./test/test.js for viewing, editing and deleting items.
 
+Task 3 - Added Dockerfile to repo.
+
+Commands used: 
+
+```
+docker build -t mytodolist-app .
+
+docker run -it -d <image_id>
+
+#I used this as a test to make sure that what was stated in my Dockerfile was actually being performed in my container.
+docker exec -it <container_id> bash
+```
+
+Task 4 - Please see the below for displayed execution of test coverage.
+
+Task 5 - I unfortunately cannot find the vulnerability. I would need more time on this step.
+
 > - Will be nice if you can git tag the tasks by number
 
 ### Solution
@@ -52,6 +69,8 @@ Task 2 - Used chai and mocha for unit testing of our existing application.
 
 Here is the test coverage below (As you can see, you can run "mocha" in the base of the project in order to preform the tests:
 
+The below is for Task 4.
+```
 SA-MAC-02:Technical-Challenge_entersekt nicholas.green$ mocha
 
   List /todo items
@@ -67,4 +86,4 @@ TODO view
 
 
   3 passing (36ms)
-
+```
